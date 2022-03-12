@@ -7,6 +7,10 @@ const Tax = require("./taxCalc")
 
 const app = express()
 
+require("dotenv-safe").config();
+
+const jwt = require('jsonwebtoken');
+
 app.use(morgan("dev"))
 
 app.use(bodyParser.urlencoded({extended: false}))

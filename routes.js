@@ -4,10 +4,22 @@ const express = require("express")
 const routes = express.Router()
 const fs = require("fs")
 const Tax = require("./taxCalc")
+const dotenv = require('dotenv');
+
+// get config vars
+dotenv.config();
+// access config var
+const secret = process.env.SECRET;
 
 routes.get("/consult/icms-simple", (req, res) => {
 
     const body = req.body
+
+    if(body.token != secret){
+
+        return res.json("Token inválido").status(404)
+
+    }
 
     let calculator = new Tax()
     

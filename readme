@@ -19,7 +19,12 @@ command: npm install express body-parser cors nodemon morgan dotenv jsonwebtoken
 
 command: npm start
 
+
 ***********************
+        Example
+
+GET - http://localhost:21262/consult/icms-simple
+
 Request Example:
 
 {

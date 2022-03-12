@@ -1,0 +1,21 @@
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+                      HELLO!!!
+
+This project use a REST API to simple consult tax
+
+To install dependencies 
+
+***********************
+        RUN:
+
+command: npm install express body-parser cors nodemon morgan dotenv jsonwebtoken dotenv-safe
+
+
+***********************
+        Start:
+
+command: npm start
+

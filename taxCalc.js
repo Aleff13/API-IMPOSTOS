@@ -1,27 +1,18 @@
-
 class Tax {
 
-    constructor(price, internal, external, mva){
-
-        this.price = price;
-        this.internal = internal;
-        this.external = external;
-        this.mva = mva;
-
-    }
-
-    icms() {
+    icms(price, mva, internal, external, descount=0, shipping=0, ipi=0) {
         
-        let price = Number(this.price.value)
-        // let descount = Number(indescount.value)
-        // let shipping = Number(inshipping.value)
-        let mva = Number(this.mva.value)
-        let internal = Number(this.internal.value)
-        let external = Number(this.external.value)
-        // let ipi = Number(inIpi.value)
+        var price = Number(price)
+        var descount = Number(descount)
+        var shipping = Number(shipping)
+        var mva = Number(mva)
+        var internal = Number(internal)
+        var external = Number(external)
+        var ipi = Number(ipi)
 
-        let priceWithDescounts = price - descount - shipping
-        let ipiTax = priceWithDescounts * (ipi / 100)
+        var priceWithDescounts = price - descount - shipping
+
+        var ipiTax = priceWithDescounts * (ipi / 100)
 
         const icmsBaseInter = priceWithDescounts
 
@@ -34,6 +25,7 @@ class Tax {
         return result;
 
     }
+
 
 }
 

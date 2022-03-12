@@ -19,3 +19,14 @@ command: npm install express body-parser cors nodemon morgan dotenv jsonwebtoken
 
 command: npm start
 
+***********************
+Request Example:
+
+{
+    "token" : "ushuashuh",
+    "price" : "3046",
+    "mva" : "60",
+    "internal" : "12",
+    "external" : "18"
+}
+
